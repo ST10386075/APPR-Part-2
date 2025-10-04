@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	  <Nullable>enableNullable</Nullable>
+    <ImplicitUsings>enableImplicitUsings</ImplicitUsings>	  
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="models\Volunteer.cs" />
+    <None Include="models\Donation.cs" />
+    <None Include="models\IncidentReport.cs" />
+    <None Include="models\User.cs" />
+    <Compile Include="Models/ErrorViewModel.fs" />
+    <None Include="controllers\VolunteerController.cs" />
+    <None Include="controllers\DonationController.cs" />
+    <None Include="controllers\IncidentController.cs" />
+    <None Include="controllers\AccountController.cs" />
+    <Compile Include="Controllers/HomeController.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <None Include="Program.cs" />
+    <None Include="viewmodels\VolunteerViewModels.cs" />
+    <None Include="viewmodels\DonationViewModel.cs" />
+    <None Include="viewmodels\IncidentReportViewModels.cs" />
+    <None Include="viewmodels\AccountViewModels.cs" />
+    <Folder Include="Views\Account\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.16.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
